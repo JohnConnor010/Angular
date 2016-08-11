@@ -29,6 +29,8 @@ public class ForgotPasswordController
     String username;
     @Value("${useDefault:spring.datasource.password}")
     String password;
+    @Value("${useDefault:spring.datasource.driver-class-name}")
+    String driver;
     @Value("${emptyDefault:}")
     String emptyValue;
 	/*@Autowired
@@ -37,7 +39,7 @@ public class ForgotPasswordController
 	public Login ChangeUser(String name, String pass)
 	{
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("drivers");
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

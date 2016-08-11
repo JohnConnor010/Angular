@@ -40,6 +40,8 @@ public class LoginController
     String username;
     @Value("${useDefault:spring.datasource.password}")
     String password;
+    @Value("${useDefault:spring.datasource.driver-class-name}")
+    String driver;
     @Value("${emptyDefault:}")
     String emptyValue;
 	
