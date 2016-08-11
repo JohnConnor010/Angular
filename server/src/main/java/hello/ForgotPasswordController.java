@@ -34,7 +34,12 @@ public class ForgotPasswordController
 	
 	public Login ChangeUser(String name, String pass)
 	{
-		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		try (Connection conn = DriverManager.getConnection(db_url, username, password))
 		{	
 			Configuration configuration = new DefaultConfiguration().set(conn).set(SQLDialect.MYSQL);
