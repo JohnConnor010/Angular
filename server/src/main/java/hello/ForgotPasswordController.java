@@ -23,12 +23,12 @@ import test.generated.tables.pojos.Login;
 public class ForgotPasswordController
 {
 	
-	@Value("${spring.datasource.url}")
-	String db_url;
-	@Value("${spring.datasource.username}")
-	String username;
-	@Value("${spring.datasource.password}")
-	String password;
+	//@Value("${spring.datasource.url}")
+	String db_url="jdbc:mysql://localhost:3306";
+	//@Value("${spring.datasource.username}")
+	String username="root";
+	//@Value("${spring.datasource.password}")
+	String password="lilbro2";
 	/*@Autowired
 	DSLContext create;*/
 	
