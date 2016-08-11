@@ -15,12 +15,12 @@ require('rxjs/Rx');
 var HttpService = (function () {
     function HttpService(http) {
         this.http = http;
-        this._emailUrl = 'http://localhost:8080/sendEmail'; // URL to web api
-        this._messageUrl = 'http://localhost:8080/sendMessage'; // URL to web api
-        this._receivemessageUrl = 'http://localhost:8080/receiveMessage'; // URL to web api
-        this._registerUrl = 'http://localhost:8080/register-javaconfig'; //URL to web api
-        this._loginUrl = 'http://localhost:8080/login-javaconfig'; //URL to web api
-        this._forgotUrl = 'http://localhost:8080/forgot-javaconfig'; //URL to web api
+        this._emailUrl = 'http://localhost:8083/Angular-0.0.1-SNAPSHOT/sendEmail'; // URL to web api
+        this._messageUrl = 'http://localhost:8083/Angular-0.0.1-SNAPSHOT/sendMessage'; // URL to web api
+        this._receivemessageUrl = 'http://localhost:8083/Angular-0.0.1-SNAPSHOT/receiveMessage'; // URL to web api
+        this._registerUrl = 'http://localhost:8083/Angular-0.0.1-SNAPSHOT//register-javaconfig'; //URL to web api
+        this._loginUrl = 'http://localhost:8083/Angular-0.0.1-SNAPSHOT/login-javaconfig'; //URL to web api
+        this._forgotUrl = 'http://localhost:8083/Angular-0.0.1-SNAPSHOT/forgot-javaconfig'; //URL to web api
         this.headers = new http_1.Headers();
         this.headers.append('Content-Type', 'application/json');
     }
