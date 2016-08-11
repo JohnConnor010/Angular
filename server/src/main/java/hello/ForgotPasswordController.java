@@ -39,7 +39,7 @@ public class ForgotPasswordController
 	public Login ChangeUser(String name, String pass)
 	{
 		try {
-			Class.forName("drivers");
+			Class.forName(driver);
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

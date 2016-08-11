@@ -50,7 +50,7 @@ public class LoginController
 		String check = null;
 		
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName(driver);
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
