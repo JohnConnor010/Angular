@@ -76,7 +76,7 @@ public class AWSSQSController
 		return null;
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://localhost:8000")
 	@RequestMapping("/receiveMessage")
 	public @ResponseBody String ReceiveSQSMessage()
 	{
