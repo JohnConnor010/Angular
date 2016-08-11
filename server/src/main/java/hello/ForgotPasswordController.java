@@ -24,7 +24,7 @@ public class ForgotPasswordController
 {
 	
 	//@Value("${spring.datasource.url}")
-	String db_url="jdbc:mysql://localhost:3306";
+	String db_url="jdbc:mysql://localhost:3306/users";
 	//@Value("${spring.datasource.username}")
 	String username="root";
 	//@Value("${spring.datasource.password}")

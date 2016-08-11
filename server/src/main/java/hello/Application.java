@@ -33,7 +33,6 @@ public class Application extends SpringBootServletInitializer
                 registry.addMapping("/register-javaconfig").allowedOrigins("http://localhost:8080");
                 registry.addMapping("/login-javaconfig").allowedOrigins("http://localhost:8080");
                 registry.addMapping("/forgot-javaconfig").allowedOrigins("http://localhost:8080");
-                registry.addMapping("/sendEmail-javaconfig").allowedOrigins("http://localhost:8080");
             }
         };
     }

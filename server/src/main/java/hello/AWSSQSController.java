@@ -47,7 +47,7 @@ public class AWSSQSController
         System.out.println();
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://localhost:8080")
 	@RequestMapping("/sendMessage")
 	public @ResponseBody String SendSQSMessage(@RequestParam(value="message", defaultValue="This is my message text.") String text) 
 	{

@@ -26,8 +26,8 @@ public class AWSSESController
 	static final String BODY = "Congratulations! You've sent an email through Amazon SES by using the AWS SDK for Java.";
 	static final String SUBJECT = "Amazon SES test (AWS SDK for Java)";
 
-	@CrossOrigin(origins = "http://localhost:3000")
-	@RequestMapping("/sendEmail-javaconfig")
+	@CrossOrigin(origins = "http://localhost:8080")
+	@RequestMapping("/sendEmail")
 	public @ResponseBody String SendEmail() throws JSONException
 	{
 		
