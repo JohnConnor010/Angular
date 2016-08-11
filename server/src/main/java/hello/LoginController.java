@@ -34,23 +34,19 @@ import org.springframework.beans.factory.annotation.*;
 public class LoginController
 {
 	boolean debug = true;
-	@Value("${useDefault:spring.datasource.url}")
-    String db_url;
-    @Value("${useDefault:spring.datasource.username}")
-    String username;
-    @Value("${useDefault:spring.datasource.password}")
-    String password;
-    @Value("${useDefault:spring.datasource.driver-class-name}")
-    String driver;
-    @Value("${emptyDefault:}")
-    String emptyValue;
+	//@Value("${spring.datasource.url}")
+		String db_url="jdbc:mysql://localhost:3306/users";
+		//@Value("${spring.datasource.username}")
+		String username="root";
+		//@Value("${spring.datasource.password}")
+		String password="lilbro2";
 	
 	public boolean CheckUser(String name, String pass)
 	{
 		String check = null;
 		
 		try {
-			Class.forName(driver);
+			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

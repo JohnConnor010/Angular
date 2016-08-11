@@ -35,22 +35,18 @@ public class RegisterController
 {
 	
 	boolean debug = false;
-	@Value("${useDefault:spring.datasource.url}")
-    String db_url;
-    @Value("${useDefault:spring.datasource.username}")
-    String username;
-    @Value("${useDefault:spring.datasource.password}")
-    String password;
-    @Value("${useDefault:spring.datasource.driver-class-name}")
-    String driver;
-    @Value("${emptyDefault:}")
-    String emptyValue;
-    
+	//@Value("${spring.datasource.url}")
+		String db_url="jdbc:mysql://localhost:3306/users";
+		//@Value("${spring.datasource.username}")
+		String username="root";
+		//@Value("${spring.datasource.password}")
+		String password="lilbro2";
+	
 	public Login CreateUser(String name, String pass)
 	{	
 		Login login = new Login(name, pass);
 		try {
-			Class.forName(driver);
+			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
