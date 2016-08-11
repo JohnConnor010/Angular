@@ -35,12 +35,14 @@ public class RegisterController
 {
 	
 	boolean debug = false;
-	//@Value("${spring.datasource.url}")
-		String db_url="jdbc:mysql://localhost:3306/users";
-		//@Value("${spring.datasource.username}")
-		String username="root";
-		//@Value("${spring.datasource.password}")
-		String password="lilbro2";
+	@Value("${useDefault:spring.datasource.url}")
+    String db_url;
+    @Value("${useDefault:spring.datasource.username}")
+    String username;
+    @Value("${useDefault:spring.datasource.password}")
+    String password;
+    @Value("${emptyDefault:}")
+    String emptyValue;
 	
 	public Login CreateUser(String name, String pass)
 	{	
