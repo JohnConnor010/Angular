@@ -1,4 +1,4 @@
-package hello;
+package com.my.contoller;
 
 
 import static test.generated.Tables.*;

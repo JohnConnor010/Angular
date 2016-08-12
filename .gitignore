@@ -1,4 +1,4 @@
 /target/
 
-/server/src/main/resources/public/node_modules
-/server/src/main/resources/public/typings
+/server/src/main/resources/node_modules/
+/server/src/main/resources/typings/

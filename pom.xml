@@ -149,28 +149,6 @@
 				</configuration>
 			</plugin>
 			<plugin>
-  <artifactId>maven-assembly-plugin</artifactId>
-  <configuration>
-    <archive>
-      <manifest>
-        <mainClass>fully.qualified.MainClass</mainClass>
-      </manifest>
-    </archive>
-    <descriptorRefs>
-      <descriptorRef>jar-with-dependencies</descriptorRef>
-    </descriptorRefs>
-  </configuration>
-  <executions>
-    <execution>
-      <id>make-assembly</id> <!-- this is used for inheritance merges -->
-      <phase>package</phase> <!-- bind to the packaging phase -->
-      <goals>
-        <goal>single</goal>
-      </goals>
-    </execution>
-  </executions>
-</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
   				<artifactId>maven-failsafe-plugin</artifactId>
   				<version>2.19.1</version>
@@ -202,6 +180,41 @@
       			<artifactId>maven-site-plugin</artifactId>
       			<version>3.0</version>
     		</plugin>
+    		<plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>exec-npm-install</id>
+                    <phase>generate-sources</phase>
+                    <configuration>
+                        <workingDirectory>${project.basedir}/src/main/resources</workingDirectory>
+                        <executable>npm</executable>
+                        <arguments>
+                            <argument>install</argument>
+                        </arguments>
+                    </configuration>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>exec-npm-run-tsc</id>
+                    <phase>generate-sources</phase>
+                    <configuration>
+                        <workingDirectory>${project.basedir}/src/main/resources</workingDirectory>
+                        <executable>npm</executable>
+                        <arguments>
+                            <argument>run</argument>
+                            <argument>tsc</argument>
+                        </arguments>
+                    </configuration>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
 		</plugins>
 	</build>
 
