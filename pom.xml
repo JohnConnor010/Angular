@@ -188,8 +188,8 @@
                     <id>exec-npm-install</id>
                     <phase>generate-sources</phase>
                     <configuration>
-                        <workingDirectory>${project.basedir}/src/main/resources</workingDirectory>
-                        <executable>npm</executable>
+                        <workingDirectory>${project.basedir}/server/src/main/resources</workingDirectory>
+                        <executable>npm.cmd</executable>
                         <arguments>
                             <argument>install</argument>
                         </arguments>
@@ -202,8 +202,8 @@
                     <id>exec-npm-run-tsc</id>
                     <phase>generate-sources</phase>
                     <configuration>
-                        <workingDirectory>${project.basedir}/src/main/resources</workingDirectory>
-                        <executable>npm</executable>
+                        <workingDirectory>${project.basedir}/server/src/main/resources</workingDirectory>
+                        <executable>npm.cmd</executable>
                         <arguments>
                             <argument>run</argument>
                             <argument>tsc</argument>
