@@ -73,7 +73,7 @@
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>20080701</version>
+			<version>20140107</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -189,7 +189,7 @@
                     <phase>generate-sources</phase>
                     <configuration>
                         <workingDirectory>${project.basedir}/server/src/main/resources</workingDirectory>
-                        <executable>npm.cmd</executable>
+                        <executable>npm.bat</executable>
                         <arguments>
                             <argument>install</argument>
                         </arguments>
@@ -203,7 +203,7 @@
                     <phase>generate-sources</phase>
                     <configuration>
                         <workingDirectory>${project.basedir}/server/src/main/resources</workingDirectory>
-                        <executable>npm.cmd</executable>
+                        <executable>npm.bat</executable>
                         <arguments>
                             <argument>run</argument>
                             <argument>tsc</argument>
